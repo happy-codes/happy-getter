@@ -1,0 +1,23 @@
+{
+  "name": "happy-getter",
+  "version": "0.1.0",
+  "description": "A data getter make you happy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yujiangshui/happy-getter.git"
+  },
+  "keywords": [
+    "data",
+    "getter"
+  ],
+  "author": "harry yu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yujiangshui/happy-getter/issues"
+  },
+  "homepage": "https://github.com/yujiangshui/happy-getter#readme"
+}

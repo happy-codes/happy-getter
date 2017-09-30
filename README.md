@@ -37,7 +37,7 @@ Add getter function to all Object:
 ```
 import {attachToObject} from 'happy-getter';
 
-attachToObject('hg'); // -> param is the getter name, default is 'getter'
+attachToObject('hg'); // -> the first param is the getter name, default is 'getter', the second param is extra options
 
 const testData = {
   a: {

@@ -1,6 +1,6 @@
 {
   "name": "happy-getter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A data getter make you happy.",
   "main": "./lib/index.js",
   "scripts": {

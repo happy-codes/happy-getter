@@ -49,4 +49,7 @@ describe('Incorrect data', function() {
       )
     );
   });
+  it('should return undefined', function() {
+    assert.equal(undefined, getter(testData, `a.b1[10]['c'][0]["d"]`));
+  });
 });

@@ -1,6 +1,6 @@
 import chai from 'chai';
 const assert = chai.assert;
-import getter from '../src';
+import getter from '../lib/index.js';
 
 const testData = {
   a: {

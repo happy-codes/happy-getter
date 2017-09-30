@@ -2,22 +2,27 @@
   "name": "happy-getter",
   "version": "0.1.0",
   "description": "A data getter make you happy.",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yujiangshui/happy-getter.git"
   },
-  "keywords": [
-    "data",
-    "getter"
-  ],
+  "keywords": ["data", "getter"],
   "author": "harry yu",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yujiangshui/happy-getter/issues"
   },
-  "homepage": "https://github.com/yujiangshui/happy-getter#readme"
+  "homepage": "https://github.com/yujiangshui/happy-getter#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "mocha": "^3.5.3",
+    "webpack": "^3.6.0"
+  }
 }

@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yujiangshui/happy-getter.git"
+    "url": "git+https://github.com/happy-codes/happy-getter.git"
   },
   "keywords": ["data", "getter"],
   "author": "harry yu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yujiangshui/happy-getter/issues"
+    "url": "https://github.com/happy-codes/happy-getter/issues"
   },
-  "homepage": "https://github.com/yujiangshui/happy-getter#readme",
+  "homepage": "https://github.com/happy-codes/happy-getter#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

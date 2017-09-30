@@ -4,6 +4,8 @@ When I get data from deep level object, I feel unhappy and fear. Because if some
 
 ![](https://img.alicdn.com/tfs/TB1PhCHhMoQMeJjy0FpXXcTxpXa-856-220.png)
 
+I had to write some ugly code like `a && a.b && a.b.c` to avoid the js error.
+
 Now, happy getter will make you happy with this.
 
 ## Usage
@@ -67,4 +69,8 @@ const c = getter(testData, 'a.b.c', { errorCallback: (errorPath, allPath) => {
 const c = getter(testData, 'a["b"][0][10].c');
 ```
 
-Read the code to get the more info, it's simple. And simple code make people happy.
+Read the code to get the more info, it's simple.
+
+## About Happy Codes
+
+Simple code make people happy. Welcome https://github.com/happy-codes

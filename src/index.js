@@ -1,4 +1,4 @@
-const REG_KEY = /\[(['"a-zA-Z0-9]*)\]/i;
+const REG_KEY = /\[(['"a-zA-Z0-9]*)\]|\./gi;
 
 /**
  * getter
@@ -7,18 +7,12 @@ const REG_KEY = /\[(['"a-zA-Z0-9]*)\]/i;
  * @param {object} options another options
  */
 function getter(data, path, options = {}) {
-  const pathArr = path.split('.');
+  const pathArr = path.split(REG_KEY).filter(item => !!item);
   const result = pathArr.reduce(
     (result, currentPath, currentIndex) => {
       if (!result.errorPath) {
         // get value
-        let key = currentPath;
-        if (REG_KEY.test(currentPath)) {
-          const nextKey = currentPath.match(REG_KEY)[1];
-          const currentKey = key.replace(nextKey, '').replace('[]', '');
-          result.value = result.value[currentKey];
-          key = nextKey;
-        }
+        let key = currentPath.replace(/[\'\"]/gi, '');
         result.value = result.value[key];
 
         // check value

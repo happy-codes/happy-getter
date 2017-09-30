@@ -5,7 +5,8 @@
   "main": "./lib/index.js",
   "scripts": {
     "build": "webpack",
-    "test": "mocha"
+    "prepub": "npm run build && npm run test",
+    "test": "npm run build && mocha --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",

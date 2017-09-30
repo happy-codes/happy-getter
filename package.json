@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/happy-codes/happy-getter.git"
   },
-  "keywords": ["data", "getter"],
+  "keywords": [
+    "data",
+    "getter"
+  ],
   "author": "harry yu",
   "license": "MIT",
   "bugs": {
@@ -23,6 +26,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
+    "chai": "^4.1.2",
     "mocha": "^3.5.3",
     "webpack": "^3.6.0"
   }

@@ -1,4 +1,5 @@
-import assert from 'assert';
+import chai from 'chai';
+const assert = chai.assert;
 import getter from '../src';
 
 const testData = {
@@ -20,7 +21,6 @@ const testData = {
     ]
   }
 };
-
 describe('Correct data', function() {
   it('should return null', function() {
     assert.equal(null, getter(testData, 'a.b.c1'));
@@ -34,10 +34,19 @@ describe('Correct data', function() {
   it('should return 1', function() {
     assert.equal(1, getter(testData, `a.b1[0]['c'][0]["d"]`));
   });
+  it('should return function', function() {
+    assert.isFunction(getter(testData, `a.b1[0]['c1']`));
+  });
 });
 
-// describe('Incorrect data', function() {
-//   it('should return 1', function() {
-//     assert.equal(1);
-//   });
-// });
+describe('Incorrect data', function() {
+  it('should return undefined', function() {
+    assert.equal(
+      undefined,
+      getter(
+        testData,
+        `dsjakljf.dsjaklfja['skdlj']["dklsa"].dsjka[0].dsajdkfjsadlfdsa`
+      )
+    );
+  });
+});

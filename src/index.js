@@ -46,13 +46,15 @@ function getter(data, path, options = {}) {
  * @param {string} name custom getter function name
  */
 function attachToObject(name = 'getter') {
-  if (!Object.prototype.hasOwnProperty(name)) {
-    Object.defineProperty(Object.prototype, name, {
-      value: function(path, options) {
-        return getter(this, path, options);
-      }
-    });
+  if (Object.prototype.hasOwnProperty(name)) {
+    throw new Error(`\`${name}\` is a built-in property of your object, using it will make you unhappy.`);
   }
+
+  Object.defineProperty(Object.prototype, name, {
+    value: function(path, options) {
+      return getter(this, path, options);
+    }
+  });
 }
 
 export default getter;

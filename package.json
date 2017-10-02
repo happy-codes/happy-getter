@@ -1,6 +1,6 @@
 {
   "name": "happy-getter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A data getter make you happy.",
   "main": "./lib/index.js",
   "scripts": {
@@ -12,10 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/happy-codes/happy-getter.git"
   },
-  "keywords": [
-    "data",
-    "getter"
-  ],
+  "keywords": ["data", "getter"],
   "author": "harry yu",
   "license": "MIT",
   "bugs": {

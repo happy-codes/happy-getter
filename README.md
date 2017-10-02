@@ -32,12 +32,12 @@ const testData = {
 const c = getter(testData, 'a.b.c');
 ```
 
-Add getter function to all Object:
+Attach getter function to all Object. The function `attachGetter` is a mixin to enable the object itself to have the getter method, so that you could call getter on the object itself:
 
 ```
-import {attachToObject} from 'happy-getter';
+import {attachGetter} from 'happy-getter';
 
-attachToObject('hg'); // -> the first param is the getter name, default is 'getter', the second param is extra options
+attachGetter('getter'); // -> the first param is the getter name, default is 'getter', the second param is extra options
 
 const testData = {
   a: {
@@ -47,7 +47,7 @@ const testData = {
   }
 };
 
-const c = testData.hg('a.b.c');
+const c = testData.getter('a.b.c');
 ```
 
 ## Tricks
@@ -57,13 +57,25 @@ const c = testData.hg('a.b.c');
 If you want to catch the error key, you can use the third params and custom a `errorCallback` function.
 
 ```
-const c = getter(testData, 'a.b.c', { errorCallback: (errorPath, allPath) => {
-  console.log('errorPath', errorPath);
-  console.log('allPath', allPath);
-} });
+const c = getter(testData, 'a.b.c', {
+  errorCallback: (errPath, allPath) => {
+    console.log('errPath', errPath);
+    console.log('allPath', allPath);
+  }
+});
 ```
 
-### get array?
+or
+
+```
+attachGetter('getter', {
+  errorCallback: (errPath, allPath) => {
+    // todo
+  }
+});
+```
+
+### get array item?
 
 ```
 const c = getter(testData, 'a["b"][0][10].c');
@@ -73,4 +85,4 @@ Read the code to get the more info, it's simple.
 
 ## About Happy Codes
 
-Simple code make people happy. Welcome https://github.com/happy-codes
+Simple code make people happy. Welcome https://github.com/happy-codes.

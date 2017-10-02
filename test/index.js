@@ -1,8 +1,6 @@
 import chai from 'chai';
 const assert = chai.assert;
-import getter, {
-  attachToObject
-} from '../lib/index.js';
+import getter, { attachGetter } from '../lib/index.js';
 
 const testData = {
   a: {
@@ -59,7 +57,7 @@ describe('Incorrect data', function() {
 describe('Not-allowed attaching', function() {
   it('should throw an error', function() {
     assert.throws(() => {
-      attachToObject('toString');
+      attachGetter('toString');
     });
   });
 });

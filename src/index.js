@@ -45,9 +45,11 @@ function getter(data, path, options = {}) {
  * put the happy getter to all object
  * @param {string} name custom getter function name
  */
-function attachToObject(name = 'getter') {
+function attachGetter(name = 'getter') {
   if (Object.prototype.hasOwnProperty(name)) {
-    throw new Error(`\`${name}\` is a built-in property of your object, using it will make you unhappy.`);
+    throw new Error(
+      `\`${name}\` is a built-in property of your object, using it will make you unhappy.`
+    );
   }
 
   Object.defineProperty(Object.prototype, name, {
@@ -58,4 +60,5 @@ function attachToObject(name = 'getter') {
 }
 
 export default getter;
-export { attachToObject };
+// attachToObject will be removed in next break change version
+export { attachGetter, attachGetter as attachToObject };

@@ -1,4 +1,4 @@
-const REG_KEY = /\[(['"a-zA-Z0-9]*)\]|\./gi;
+const REG_KEY = /\[(['"_a-zA-Z0-9]*)\]|\./gi;
 
 /**
  * getter
